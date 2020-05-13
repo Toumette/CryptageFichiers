@@ -12,7 +12,7 @@
 
 * Les fichiers à crypter peuvent être des archives contenant un nombre quelconque de fichiers.
 
-* Pour ne pas encombrer le répertoire, les 2 scripts ".cryptage" et ".decryptage" sont en fichiers "cachés" (ils commencent par un ".").
+* Pour ne pas encombrer le répertoire, les 2 scripts ".cryptage" et ".decryptage" sont en fichiers "cachés" (après suppression du "\_" à réaliser après téléchargement, ils commencent par un ".").
 
 * Je place le fichier crypté ansi que les 4 fichiers de l'outil dans un même répertoire pour constituer un ensemble autonome.
 
