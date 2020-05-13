@@ -1,0 +1,66 @@
+#!/bin/bash
+
+###############################################################################
+# LANCEUR DU SCRIPT DE DECRYPTAGE                                             #
+# Tous les fichiers se trouvent dans le même répertoire (courant) :           #
+# decryptage_lanceur + decryptage + fichier à crypter + fichier crypté        #
+# Ce lanceur est appelé en environnement graphique et ouvre fenêtre pour      #
+# l'exécution du script de cryptage proprement dit et la saisie du password   #
+# les scripts de cryptage/décryptage sont en fichiers cachés .xxxxx           #
+# les lanceurs et les scipts doivent être rendus exécutables                  #
+###############################################################################
+
+###############################################################################
+# Configuration de l'interpréteur BASH pour fonctionner en mode 'strict'      #
+# afin de faciliter le débogage du script :                                   #
+###############################################################################
+
+set -e            # Sortie immédiate si erreur dans commande (code /= de 0)
+name=${1:-}       # Redéfinit les arguments d'entrée sous forme de variables
+                  # internes au scrip (permet d'utiliser -u avec des
+                  # arguments d'entrée)
+set -u            # Interdit le référencement de variables non définies avant
+set -o pipefail   # Empêche le masquage des erreurs dans un pipeline
+IFS=$'\n\t'       # IFS correspond à un séparateur de champ interne à Bash
+                  # il contrôle ce que Bash appelle le fractionnement de mots
+# -----------------------------------------------------------------------------
+# Faire particulièrement attention aux quotes, double quotes, apostrophes...
+# Les temporisations 'sleep' ne sont pas indispensables au fonctionnement,
+# elles permettent de suivre la progression des opérations
+
+# Ouverture de la fenêtre terminal par 'xterm' et
+# exécution de toutes les commandes ci-dessous dans cette nouvelle fenêtre
+# ces commandes sont celles situées entre les 2 doubles quotes "XXX"
+# NB : il est indispensable, dans ce cas, d'utiliser des simples quotes
+# pour la commande 'echo'
+# -----------------------------------------------------------------------------
+xterm -e "
+
+echo 'Lanceur du programme de decryptage';
+echo '© Henri';
+echo '-----------------------------------------------------------------------------';
+
+sleep 1;
+
+# lancement du script de décryptage (répertoire courant) :
+./.decryptage;
+
+echo 'le programme de décryptage a été exécuté';
+
+echo '-----------------------------------------------------------------------------';
+sleep 1;
+
+# La commande 'read' permet de laisser la fenêtre ouverte pour consultation
+# jusqu'à ce que l'utilisateur presse 'entrée'
+
+read -p 'Presser [Enter] pour fermer la fenêtre...';
+
+echo;
+echo 'Bye !';
+echo;
+sleep 1;
+
+"
+# -----------------------------------------------------------------------------
+# Cette double quote indique la fin des commandes exécutées dans la fenêtre
+# créée par 'xterm' et la fermeture de cette fenêtre
