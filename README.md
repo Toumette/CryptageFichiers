@@ -22,7 +22,7 @@
 
 * L'ensemble des fichiers de l'outil doivent être rendus exécutables.
 
-* Avec la version que j'ai utilisée (OpenSSL 1.1.0i-fips  14 Aug 2018), le "salage" est automatique : pas besoin de le spécifier (option : -salt non reconnue) ; il change à chaque invocation de la commande "openssl aes-256-cbc" et il est mémorisé en début de fichier.
+* Avec la version que j'ai utilisée (OpenSSL 1.1.0i-fips  14 Aug 2018), le "salage" est automatique : pas besoin de le spécifier (option : "-salt" non reconnue) ; il change à chaque invocation de la commande "openssl aes-256-cbc" et il est mémorisé en début de fichier.
 
 * Réalisé et exécuté sous Linux OpenSuse Leap ; bureau KDE ; sur PC 64 bits.
 
