@@ -32,7 +32,7 @@ On dispose d'un fichier contenant des données sensibles que l'on veut protéger
 
 * Pour ouvrir ce fichier, afin de le consulter ou de le modifier, on doubleclic sur "decryptage_lanceur".
 
-* On peut alors consulter et/ou modifier la copie en clair à l'aide de l'éditeur approprié.
+* On peut alors consulter et/ou modifier la copie en clair, générée par l'outil, à l'aide de l'éditeur approprié.
 
 * Si on souhaite crypter et conserver la version que l'on vient de modifier, on doubleclic sur "cryptage_lanceur" => ATTENTION !!! la précédente version cryptée est remplacée par la version que l'on vient de modifier.
 
