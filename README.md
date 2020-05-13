@@ -26,6 +26,18 @@
 
 * Réalisé et exécuté sous Linux OpenSuse Leap ; bureau KDE ; sur PC 64 bits.
 
+### Exemple d'utilisation
+
+On dispose d'un fichier contenant des données sensibles que l'on veut protéger. On place ce fichier ainsi que les 4 fichiers de l'outil dans un même répertoire.
+
+* Pour ouvrir ce fichier, afin de le consulter ou de le modifier, on doubleclic sur "decryptage_lanceur".
+
+* On peut alors consulter et/ou modifier la copie en clair à l'aide de l'éditeur approprié.
+
+* Si on souhaite crypter et conserver la version que l'on vient de modifier, on doubleclic sur "cryptage_lanceur" => ATTENTION !!! la précédente version cryptée est remplacée par la version que l'on vient de modifier.
+
+* On efface manuellement la copie en clair.
+
 ---
 _Ces cripts, volontairement "sur-commentés", s'adressent aux débutants en scripting Bash._
 _© Henri 13/05/20_
