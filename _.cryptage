@@ -1,0 +1,63 @@
+#!/bin/bash
+
+###############################################################################
+# SCRIPT DE CRYPTAGE PROPREMENT DIT                                           #
+# Ce script est appelé en environnement graphique par le lanceur              #
+# et s'exécute dans la fenêtre que ce dernier a ouverte                       #
+###############################################################################
+
+###############################################################################
+# Configuration de l'interpréteur BASH pour fonctionner en mode 'strict'      #
+# afin de faciliter le débogage du script :                                   #
+###############################################################################
+
+set -e            # Sortie immédiate si erreur dans commande (code /= de 0)
+name=${1:-}       # Redéfinit les arguments d'entrée sous forme de variables
+                  # internes au scrip (permet d'utiliser -u avec des
+                  # arguments d'entrée - non utilisé ici)
+set -u            # Interdit le référencement de variables non définies avant
+set -o pipefail   # Empêche le masquage des erreurs dans un pipeline
+IFS=$'\n\t'       # IFS correspond à un séparateur de champ interne à Bash
+                  # il contrôle ce que Bash appelle le fractionnement de mots
+
+# -----------------------------------------------------------------------------
+
+echo 'Patientez, cryptage en cours... ';
+echo '© Henri';
+echo '-----------------------------------------------------------------------------';
+
+sleep 1;
+
+echo 'Le cryptage sera exécuté dès la saisie du mot de passe';
+echo 'ATTENTION ! Si le fichier crypté est présent dans le répertoire,';
+echo 'il sera écrasé';
+echo '-----------------------------------------------------------------------------';
+echo;
+
+# Le cryptage est exécuté par la commande 'openssl aes-256-cbc'
+# Le bakslash permet, si besoin, d'écrire les arguments sur plusieurs lignes en
+# supprimant l'interprétation du caractère qui le suit immédiatement (saut de ligne)
+# NB : il ne faut pas d'espace après le backslash
+
+openssl aes-256-cbc   \
+-in fichier_en_clair  \
+-out fichier_crypte ;
+
+sleep 1;
+echo;
+echo '-----------------------------------------------------------------------------';
+echo 'Cryptage terminé';
+echo '-----------------------------------------------------------------------------';
+sleep 1;
+
+
+# DETAIL DES PARAMETRES DE OPENSSL UTILISES POUR LE (DE)CRYPTAGE
+# --------------------------------------------------------------
+# aes-256-cbc  Algorithme de chiffrement choisi
+#              c'est l'algorithme actuel le plus performant
+#              en terme de sécurité et rapidité
+    
+# -d           indique qu'on déchiffre (lors du chiffrage
+#              le paramètre -e pour encoder est implicite,
+#              il peut être omis)
+# -in et -out  fichiers d'entrée et de sortie
