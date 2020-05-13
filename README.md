@@ -8,11 +8,11 @@
 
 * Lancement en mode graphique par double-clic sur les programmes "lanceurs" dans le navigateur de fichiers.
 
-* Configurer les noms des fichiers "en clair" et "crypté" dans les 2 scripts ".cryptage" et ".decryptage" avant le 1er lancement.
+* Configurer les noms des fichiers "en clair" et "crypté" dans le corps des 2 scripts ".cryptage" et ".decryptage" avant le 1er lancement.
 
 * Les fichiers à crypter peuvent être des archives contenant un nombre quelconque de fichiers.
 
-* Pour ne pas encombrer le répertoire, les 2 scripts ".cryptage" et ".decryptage" sont en fichiers "cachés" (après suppression du "\_" à réaliser après téléchargement, ils commencent par un ".").
+* Pour ne pas encombrer le répertoire, les 2 scripts ".cryptage" et ".decryptage" sont en "fichiers cachés" (après suppression du "\_" à réaliser après téléchargement, ils commenceront par un ".").
 
 * Je place le fichier crypté ansi que les 4 fichiers de l'outil dans un même répertoire pour constituer un ensemble autonome.
 
@@ -28,5 +28,4 @@
 
 ---
 _Ces cripts, volontairement "sur-commentés", s'adressent aux débutants en scripting Bash._
-_© Henri 03/05/20_
-
+_© Henri 13/05/20_
