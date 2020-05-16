@@ -39,5 +39,5 @@ On dispose d'un fichier contenant des données sensibles que l'on veut protéger
 * On efface manuellement la copie en clair.
 
 ---
-_Ces cripts, volontairement "sur-commentés", s'adressent aux débutants en scripting Bash._
+_Ces scripts, volontairement "sur-commentés", s'adressent aux débutants en scripting Bash._
 _© Henri 13/05/20_
