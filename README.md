@@ -40,4 +40,5 @@ On dispose d'un fichier contenant des données sensibles que l'on veut protéger
 
 ---
 _Ces scripts, volontairement "sur-commentés", s'adressent aux débutants en scripting Bash._
-_© Henri 13/05/20_
+
+_© Henri 13/05/20 - Plus d'informations : https://henri.nitnoc.me_
